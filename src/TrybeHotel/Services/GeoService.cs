@@ -1,12 +1,13 @@
 using System.Net.Http;
 using TrybeHotel.Dto;
+using TrybeHotel.Models;
 using TrybeHotel.Repository;
 
 namespace TrybeHotel.Services
 {
     public class GeoService : IGeoService
     {
-         private readonly HttpClient _client;
+        private readonly HttpClient _client;
         public GeoService(HttpClient client)
         {
             _client = client;
@@ -15,24 +16,81 @@ namespace TrybeHotel.Services
         // 11. Desenvolva o endpoint GET /geo/status
         public async Task<object> GetGeoStatus()
         {
-            throw new NotImplementedException();
+            HttpRequestMessage? requestMessage = new HttpRequestMessage(HttpMethod.Get, "https://nominatim.openstreetmap.org/status.php?format=json"); 
+            requestMessage.Headers.Add("Accept", "application/json");
+            HttpResponseMessage response = await _client.SendAsync(requestMessage);
+
+            if (response.IsSuccessStatusCode)
+            {
+                object? result = await response.Content.ReadFromJsonAsync<object>();
+                return result!;
+            }  
+
+            return default!;
         }
         
         // 12. Desenvolva o endpoint GET /geo/address
         public async Task<GeoDtoResponse> GetGeoLocation(GeoDto geoDto)
         {
-            throw new NotImplementedException();
+            HttpRequestMessage? requestMessage = new HttpRequestMessage(HttpMethod.Get, $"https://nominatim.openstreetmap.org/search?street={geoDto.Address}&city={geoDto.City}&country=Brazil&state={geoDto.State}&format=json&limit=1");
+            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("User-Agent", "aspnet-user-agent");
+            HttpResponseMessage response = await _client.SendAsync(requestMessage);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadFromJsonAsync<GeoDtoResponse[]>();
+                return result?.FirstOrDefault()!; 
+            }
+
+            return default!;
         }
 
         // 12. Desenvolva o endpoint GET /geo/address
         public async Task<List<GeoDtoHotelResponse>> GetHotelsByGeo(GeoDto geoDto, IHotelRepository repository)
         {
-            throw new NotImplementedException();
+            GeoDtoResponse locationResponse = await GetGeoLocation(geoDto);
+            
+            IEnumerable<HotelDto>? hotels = repository.GetHotels();
+
+            List<GeoDtoHotelResponse> geoDtoHotelResponses = new();
+            foreach (var hotel in hotels)
+            {
+                GeoDtoResponse? hotelLocation = await GetGeoLocation(new GeoDto
+                {
+                    Address = hotel.Address,
+                    City = hotel.CityName,
+                    State = hotel.State
+                });
+
+                if (hotelLocation != null)
+                {
+                    int distance = CalculateDistance(
+                        locationResponse.lat!,
+                        locationResponse.lon!,
+                        hotelLocation.lat!,
+                        hotelLocation.lon!
+                    );
+
+                    geoDtoHotelResponses.Add(new()
+                    {
+                        HotelId = hotel.HotelId,
+                        Name = hotel.Name,
+                        Address = hotel.Address,
+                        CityName = hotel.CityName,
+                        State = hotel.State,
+                        Distance = distance
+                    });
+                }
+            }
+
+            geoDtoHotelResponses.Sort((x, y) => x.Distance.CompareTo(y.Distance));
+
+            return geoDtoHotelResponses;
         }
 
-       
-
-        public int CalculateDistance (string latitudeOrigin, string longitudeOrigin, string latitudeDestiny, string longitudeDestiny) {
+        public int CalculateDistance (string latitudeOrigin, string longitudeOrigin, string latitudeDestiny, string longitudeDestiny) 
+        {
             double latOrigin = double.Parse(latitudeOrigin.Replace('.',','));
             double lonOrigin = double.Parse(longitudeOrigin.Replace('.',','));
             double latDestiny = double.Parse(latitudeDestiny.Replace('.',','));
@@ -46,9 +104,9 @@ namespace TrybeHotel.Services
             return int.Parse(Math.Round(distance,0).ToString());
         }
 
-        public double radiano(double degree) {
+        public double radiano(double degree) 
+        {
             return degree * Math.PI / 180;
         }
-
     }
 }

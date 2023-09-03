@@ -10,20 +10,58 @@ namespace TrybeHotel.Repository
         {
             _context = context;
         }
-
-        // 7. Refatore o endpoint GET /room
+        
         public IEnumerable<RoomDto> GetRooms(int HotelId)
         {
-           throw new NotImplementedException();
+            return _context.Rooms.Where(room => room.HotelId == HotelId).Select(room => new RoomDto
+            {
+                RoomId = room.RoomId,
+                Name = room.Name,
+                Capacity = room.Capacity,
+                Image = room.Image,
+                Hotel = new HotelDto
+                    {
+                        HotelId = room.Hotel!.HotelId,
+                        Name = room.Hotel.Name,
+                        Address = room.Hotel.Address,
+                        CityId = room.Hotel.CityId,
+                        CityName = room.Hotel.City!.Name,
+                        State = room.Hotel.City!.State
+                    }
+            }).ToList();
         }
 
-        // 8. Refatore o endpoint POST /room
         public RoomDto AddRoom(Room room) {
-            throw new NotImplementedException();
-        }
+            _context.Rooms.Add(room);
+            _context.SaveChanges();
 
-        public void DeleteRoom(int RoomId) {
-           throw new NotImplementedException();
+            var roomData =  new RoomDto {
+                RoomId = room.RoomId,
+                Name = room.Name,
+                Capacity = room.Capacity,
+                Image = room.Image,
+                Hotel = _context.Hotels.Where(hotel => hotel.HotelId == room.HotelId)
+                    .Select(hotel => new HotelDto
+                    {
+                        HotelId = hotel.HotelId,
+                        Name = hotel.Name,
+                        Address = hotel.Address,
+                        CityId = hotel.CityId,
+                        CityName = _context.Cities.Where(city => city.CityId == hotel.CityId)
+                            .Select(city => city.Name).First(),
+                        State = _context.Cities.Where(city => city.CityId == hotel.CityId)
+                            .Select(city => city.State).First()                                            
+                    }).First()
+            };
+            return roomData;
+        }
+        
+        public void DeleteRoom(int RoomId) {             
+            _context.Rooms
+                .Remove(_context.Rooms
+                .Where(room => room.RoomId == RoomId).First());
+            _context
+                .SaveChanges();
         }
     }
 }

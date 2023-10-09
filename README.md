@@ -1,272 +1,272 @@
-# Trybe Hotel - Fase D
+# SmartHotel
 
-Boas-vindas ao repositório do projeto Trybe Hotel - Fase D
+Welcome to the Smart Hotel project repository
 
-Para realizar o projeto, atente-se a cada passo descrito a seguir, e se tiver **qualquer dúvida**, nos envie no _Slack_ da turma! #vqv 🚀
+To carry out the project, pay attention to each step described below, and if you have **any questions**, send them to us on the class _Slack_! #vqv 🚀
 
-Aqui, você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir desse repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
+Here, you will find details on how to structure the development of your project from this repository, using a specific branch and a _Pull Request_ to place your codes.
 
-## Termos e acordos
+## Terms and agreements
 
-Ao iniciar este projeto, você concorda com as diretrizes do [Código de Conduta e do Manual da Pessoa Estudante da Trybe](https://app.betrybe.com/learn/student-manual/codigo-de-conduta-da-pessoa-estudante).
+By starting this project, you agree to the guidelines of [Trybe's Code of Conduct and Student Person's Manual](https://app.betrybe.com/learn/student-manual/codigo-de-conduta-da-pessoa -student).
 
-## Entregáveis
+## Deliverables
 ---
 
 <details>
-<summary><strong>🤷🏽‍♀️ Como entregar</strong></summary>
+<summary><strong>🤷🏽‍♀️ How to deliver</strong></summary>
 
-Para entregar o seu projeto você deverá criar um _Pull Request_ neste repositório.
+To deliver your project you must create a _Pull Request_ in this repository.
 
-Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/fc998c60-386e-46bc-83ca-4269beb17e17/section/fe827a71-3222-4b4d-a66f-ed98e09961af/day/1a530297-e176-4c79-8ed9-291ae2950540/lesson/2b2edce7-9c49-4907-92a2-aa571f823b79) e nosso [Blog - Git & GitHub](https://blog.betrybe.com/tecnologia/git-e-github/) sempre que precisar!
-
-</details>
-  
-<details>
-<summary><strong>🧑‍💻 O que deverá ser desenvolvido</strong></summary>
-
-Sua empresa do coração começou a desenvolver um software de booking de várias redes de hotéis.
-Sua missão é continuar o desenvolvimento dessa API. Será necessário criar uma rota padrão para ver o status da aplicação e construir um Dockerfile capaz de preparar sua aplicação para Deploy. Nessa fase, sua missão será refatorar o projeto para comportar essa funcionalidade e desenvolvê-la.
+Remember that you can consult our content on [Git & GitHub](https://app.betrybe.com/learn/course/5e938f69-6e32-43b3-9685-c936530fd326/module/fc998c60-386e-46bc-83ca- 4269beb17e17/section/fe827a71-3222-4b4d-a66f-ed98e09961af/day/1a530297-e176-4c79-8ed9-291ae2950540/lesson/2b2edce7-9c49-4907-92a2-aa571f823b 79) and our [Blog - Git & GitHub](https: //blog.betrybe.com/tecnologia/git-e-github/) whenever you need it!
 
 </details>
   
 <details>
-  <summary><strong>📝 Habilidades a serem trabalhadas </strong></summary>
+<summary><strong>🧑‍💻 What should be developed</strong></summary>
 
-Neste projeto, verificamos se você é capaz de:
+His favorite company started developing booking software for several hotel chains.
+Your mission is to continue the development of this API. You will need to create a default route to see the application status and build a Dockerfile capable of preparing your application for deployment. At this stage, your mission will be to refactor the project to support this functionality and develop it.
 
-- Entender o processo de criar containers para a aplicação.
-- Preparar um sistema para deploy.
+</details>
+  
+<details>
+   <summary><strong>📝 Skills to be worked on </strong></summary>
+
+In this project we check if you are able to:
+
+- Understand the process of creating containers for the application.
+- Prepare a system for deployment.
 
 
 </details>
 
 <details>
-<summary><strong>🗓 Data de Entrega</strong></summary>
+<summary><strong>🗓 Delivery Date</strong></summary>
 
-- Este projeto é individual
+- This project is individual
 
-- Serão 2 dias de projeto.
+- There will be 2 days of project.
 
-- Data para entrega final do projeto: 05/09/2023 14:00`.
+- Date for final delivery of the project: 09/05/2023 2:00 pm.
 
 </details>
 
-## Orientações
+## Guidelines
 ---
 
 <details>
-  <summary><strong>‼️ Antes de começar a desenvolver</strong></summary><br />
+   <summary><strong>‼️ Before you start developing</strong></summary><br />
 
-  1. Clone o repositório
+   1. Clone the repository
 
-  - Use o comando: `git clone git@github.com:tryber/csharp-026-csharp-projeto-trybe-hotel-fase-d.git`.
-  - Entre na pasta do repositório que você acabou de clonar:
-    - `cd csharp-026-csharp-projeto-trybe-hotel-fase-d`
+   - Use the command: `git clone git@github.com:tryber/csharp-026-csharp-projeto-trybe-hotel-fase-d.git`.
+   - Go to the repository folder you just cloned:
+     - `cd csharp-026-csharp-projeto-trybe-hotel-fase-d`
 
-  2. Instale as dependências
+   2. Install dependencies
   
-  - Entre na pasta `src/`.
-  - Execute o comando: `dotnet restore`.
+   - Enter the `src/` folder.
+   - Run the command: `dotnet restore`.
   
-  3. Crie uma branch a partir da branch `master`
+   3. Create a branch from the `master` branch
 
-  - Verifique se você está na branch `master`
-    - Exemplo: `git branch`
-  - Se não estiver, mude para a branch `master`
-    - Exemplo: `git checkout master`
-  - Agora crie uma branch à qual você vai submeter os `commits` do seu projeto
-    - Você deve criar uma branch no seguinte formato: `nome-de-usuario-nome-do-projeto`
-    - Exemplo: `git checkout -b joaozinho-csharp-026-csharp-projeto-trybe-hotel-fase-d`
+   - Make sure you are on the `master` branch
+     - Example: `git branch`
+   - If not, switch to the `master` branch
+     - Example: `git checkout master`
+   - Now create a branch to which you will commit your project's commits
+     - You must create a branch in the following format: `user-name-project-name`
+     - Example: `git checkout -b joaozinho-csharp-026-csharp-projeto-trybe-hotel-fase-d`
 
-  4. Adicione as mudanças ao _stage_ do Git e faça um `commit`
+   4. Add changes to Git _stage_ and `commit`
 
-  - Verifique que as mudanças ainda não estão no _stage_
-    - Exemplo: `git status` (deve aparecer listada a pasta _joaozinho_ em vermelho)
-  - Adicione o novo arquivo ao _stage_ do Git
-    - Exemplo:
-      - `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
-      - `git status` (deve aparecer listado o arquivo _joaozinho/README.md_ em verde)
-  - Faça o `commit` inicial
-    - Exemplo:
-      - `git commit -m 'iniciando o projeto x'` (fazendo o primeiro commit)
-      - `git status` (deve aparecer uma mensagem tipo essa: _nothing to commit_ )
+   - Check that the changes are not yet in _stage_
+     - Example: `git status` (the _joaozinho_ folder should appear listed in red)
+   - Add the new file to Git _stage_
+     - Example:
+       - `git add .` (adding all changes - _that were in red_ - to the Git stage)
+       - `git status` (the file _joaozinho/README.md_ should appear listed in green)
+   - Make the initial `commit`
+     - Example:
+       - `git commit -m 'starting project x'` (making the first commit)
+       - `git status` (a message like this should appear: _nothing to commit_ )
 
-  5. Adicione a sua branch com o novo `commit` ao repositório remoto
+   5. Add your branch with the new `commit` to the remote repository
 
-  - Usando o exemplo anterior: `git push -u origin joaozinho-csharp-026-csharp-projeto-trybe-hotel-fase-d`
+   - Using the previous example: `git push -u origin joaozinho-csharp-026-csharp-projeto-trybe-hotel-fase-d`
 
-  6. Crie um novo `Pull Request` _(PR)_
+   6. Create a new `Pull Request` _(PR)_
 
-  - Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/csharp-026-csharp-projeto-trybe-hotel-fase-d/pulls)
-  - Clique no botão verde _"New pull request"_
-  - Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
-  - Coloque um título para a sua _Pull Request_
-    - Exemplo: _"Cria tela de busca"_
-  - Clique no botão verde _"Create pull request"_
-  - Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
-  - **Não se preocupe em preencher mais nada por enquanto!**
-  - Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/csharp-0x-projeto-trybe-hotel/pulls) e confira que o seu _Pull Request_ está criado
-
-</details>
-
-<details>
-  <summary><strong>⌨️ Durante o desenvolvimento</strong></summary><br/>
-
-  - Faça `commits` das alterações que você fizer no código regularmente
-
-  - Lembre-se sempre de, após um (ou alguns) `commits`, atualizar o repositório remoto
-
-  - Os comandos que você utilizará com mais frequência são:
-    1. `git status` _(para verificar o que está em vermelho - fora do stage - e o que está em verde - no stage)_
-    2. `git add` _(para adicionar arquivos ao stage do Git)_
-    3. `git commit` _(para criar um commit com os arquivos que estão no stage do Git)_
-    4. `git push -u origin nome-da-branch` _(para enviar o commit para o repositório remoto na primeira vez que fizer o `push` de uma nova branch)_
-    5. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_
+   - Go to the _Pull Requests_ page of [repository on GitHub](https://github.com/tryber/csharp-026-csharp-projeto-trybe-hotel-fase-d/pulls)
+   - Click on the green _"New pull request"_ button
+   - Click on the _"Compare"_ checkbox and choose your branch **carefully**
+   - Put a title for your _Pull Request_
+     - Example: _"Create search screen"_
+   - Click on the green _"Create pull request"_ button
+   - Add a description for the _Pull Request_ and click the green _"Create pull request"_ button
+   - **Don't worry about filling out anything else for now!**
+   - Go back to the [repository's _Pull Requests_ page](https://github.com/tryber/csharp-0x-projeto-trybe-hotel/pulls) and check that your _Pull Request_ is created
 
 </details>
 
 <details>
-  <summary><strong>🤝 Depois de terminar o desenvolvimento (opcional)</strong></summary><br/>
+   <summary><strong>⌨️ During development</strong></summary><br/>
 
-  Para sinalizar que o seu projeto está pronto para o _"Code Review"_, faça o seguinte:
+   - Commit changes you make to the code regularly
 
-  - Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
+   - Always remember, after one (or a few) `commits`, to update the remote repository
 
-    - No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
-
-    - No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
-
-    - No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-026-csharp`.
-
-  Caso tenha alguma dúvida, [aqui tem um vídeo explicativo](https://vimeo.com/362189205).
-
-</details>
-
-<details>
-  <summary><strong>🕵🏿 Revisando um pull request</strong></summary><br />
-
-  Use o conteúdo sobre [Code Review](https://app.betrybe.com/course/real-life-engineer/code-review) para te ajudar a revisar os _Pull Requests_.
+   - The commands you will use most frequently are:
+     1. `git status` _(to check what is in red - out of stage - and what is in green - on stage)_
+     2. `git add` _(to add files to the Git stage)_
+     3. `git commit` _(to create a commit with the files that are in the Git stage)_
+     4. `git push -u origin branch-name` _(to push the commit to the remote repository the first time you `push` a new branch)_
+     5. `git push` _(to push the commit to the remote repository after the previous step)_
 
 </details>
 
 <details>
-  <summary><strong>🎛 Linter</strong></summary><br />
+   <summary><strong>🤝 After finishing development (optional)</strong></summary><br/>
 
-  Usaremos o [NetAnalyzer](https://docs.microsoft.com/pt-br/dotnet/fundamentals/code-analysis/overview) para fazer a análise estática do seu código.
+   To signal that your project is ready for _"Code Review"_, do the following:
 
-  Este projeto já vem com as dependências relacionadas ao _linter_ configuradas no arquivo `.csproj`.
+   - Go to the **YOUR** _Pull Request_ page, add the _"code-review"_ label and tag your colleagues:
 
-  O analisador já é instalado pelo plugin da `Microsoft C#` no `VSCode`. Para isso, basta fazer o download do [plugin](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) e instalá-lo.
+     - In the menu on the right, click on the _link_ **"Labels"** and choose the _label_ **code-review**;
+
+     - In the menu on the right, click on the _link_ **"Assignees"** and choose **your username**;
+
+     - In the menu on the right, click on the _link_ **"Reviewers"** and type `students`, select the team `tryber/students-sd-026-csharp`.
+
+   If you have any questions, [here is an explanatory video](https://vimeo.com/362189205).
+   
+   </details>
+
+<details>
+   <summary><strong>🕵🏿 Reviewing a pull request</strong></summary><br />
+
+   Use the content about [Code Review](https://app.betrybe.com/course/real-life-engineer/code-review) to help you review _Pull Requests_.
+
 </details>
 
 <details>
-  <summary><strong>🛠 Testes</strong></summary><br />
+   <summary><strong>🎛 Linter</strong></summary><br />
 
-  O .NET já possui sua própria plataforma de testes.
+   We will use [NetAnalyzer](https://docs.microsoft.com/pt-br/dotnet/fundamentals/code-analysis/overview) to perform static analysis of your code.
+
+   This project already comes with _linter_-related dependencies configured in the `.csproj` file.
+
+   The analyzer is already installed by the `Microsoft C#` plugin in `VSCode`. To do this, simply download the [plugin](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) and install it.
+</details>
+
+<details>
+   <summary><strong>🛠 Tests</strong></summary><br />
+
+   .NET already has its own testing platform.
   
-  Este projeto já vem configurado e com suas dependências.
+   This project is already configured and with its dependencies.
 
-  ### Executando todos os testes
+   ### Running all tests
 
-  Para executar os testes com o .NET, execute o comando dentro do diretório do seu projeto `src`!
+   To run the tests with .NET, run the command inside your project directory `src`!
 
-  ```
-  dotnet test
-  ```
+   ```
+   dotnet test
+   ```
 
-  ### Executando um teste específico
+   ### Running a specific test
 
-  Para executar um teste específico, basta executar o comando `dotnet test --filter Name~TestReq01`.
+   To run a specific test, simply run the command `dotnet test --filter Name~TestReq01`.
 
-  :warning: **Importante:** o comando irá executar testes cujo nome contém `TestReq01`.
+   :warning: **Important:** the command will run tests whose name contains `TestReq01`.
 
-  :warning: **O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?**
+   :warning: **The automatic evaluator does not necessarily evaluate your project in the order in which the requirements appear in the readme. This is to make the evaluation process faster. So don't be alarmed if this happens, okay?**
 
-  ### Outras opções para testes
-  - Algumas opções que podem lhe ajudar são:
-    -  `-?|-h|--help`: exibe a descrição completa de como utilizar o comando.
-    -  `-t|--list-tests`: lista todos os testes, ao invés de executá-los.
-    -  `-v|--verbosity <LEVEL>`: define o nível de detalhe na resposta dos testes.
-      - `q | quiet`
-      - `m | minimal`
-      - `n | normal`
-      - `d | detailed`
-      - `diag | diagnostic`
-      - Exemplo de uso: 
-         ```
-           dotnet test -v diag
-         ```
-         ou
-         ```            
-           dotnet test --verbosity=diagnostic
-         ``` 
+   ### Other testing options
+   - Some options that can help you are:
+     - `-?|-h|--help`: displays the complete description of how to use the command.
+     - `-t|--list-tests`: lists all tests, instead of running them.
+     - `-v|--verbosity <LEVEL>`: defines the level of detail in the test response.
+       - `q | quiet
+       - `m | minimal
+       - `n | normal`
+       - `d | detailed`
+       - `diag | diagnosis
+       - Example of use:
+          ```
+            dotnet test -v diag
+          ```
+          or
+          ```
+            dotnet test --verbosity=diagnostic
+          ```
 </details>
 
-## Requisitos do projeto
+## Project requirements
 
-Você está desenvolvendo uma API que será utilizada em uma aplicação de booking de várias redes de hotéis.
+You are developing an API that will be used in a booking application for several hotel chains.
 
-Na primeira fase deste projeto, você desenvolveu algumas rotas de entidades acerca de cidades, hotéis e quartos. Na segunda fase, você construiu rotas para o cadastro e login de pessoas clientes e o cadastro de reservas. Na terceira fase, você adicionou novas funcionalidades em rotas e adicionou serviços externos. **Agora, você irá desenvolver uma funcionalidade preparar a sua aplicação para deploy.**
+In the first phase of this project, you developed some entity routes about cities, hotels and rooms. In the second phase, you built routes for registering and logging in for customers and registering reservations. In the third phase, you added new functionality to routes and added external services. **Now, you will develop a functionality to prepare your application for deployment.**
 
-No intuito de auxiliar o desenvolvimento, o time de produto já disponibilizou o diagrama de entidade-relacionamento atualizado e o time de DevOps disponibilizou um container na qual você poderá utilizar um banco de dados.
+In order to assist development, the product team has already made available the updated entity-relationship diagram and the DevOps team has made available a container in which you can use a database.
 
-O sistema está dividido em diretórios específicos para auxiliar na organização e desenvolvimento do projeto.
+The system is divided into specific directories to assist in the organization and development of the project.
 
-- `Controllers/`: Este diretório armazena os arquivos com as lógicas dos controllers da aplicação. Os métodos a serem desenvolvidos estão prontos mas sem implementação alguma, o que você desenvolverá ao longo do projeto.
+- `Controllers/`: This directory stores files with the application's controller logic. The methods to be developed are ready but without any implementation, which you will develop throughout the project.
 <br />
 
-- `Models/`: Este diretório armazena os arquivos com as models do banco de dados. Você já desenvolveu as models `City`, `Hotel`, `Room`, `User` e `Bokking` que serão os modelos para as tabelas `Cities`, `Hotels`, `Rooms`, `Users` e `Bookings`.
+- `Models/`: This directory stores the files with the database models. You have already developed the models `City`, `Hotel`, `Room`, `User` and `Bokking` which will be the models for the `Cities`, `Hotels`, `Rooms`, `Users` and `Bookings` tables .
 <br />
 
-- `DTO/`: Este diretório armazena as classes de DTO. Algumas rotas esperam as `responses` baseadas nestes DTOs. Você pode conferir isso pelo requisito do projeto e pelo retorno dos métodos dos `repositories`.
+- `DTO/`: This directory stores the DTO classes. Some routes expect responses based on these DTOs. You can check this by the project requirement and the return of the `repositories` methods.
 <br />
 
-- `Repository/`: Este diretório armazena as lógicas que farão a interação com o banco de dados. Os métodos de cada requisito já estão criados e você deverá incluir a implementação de cada um desses métodos respeitando o retorno do DTO. Além disso, você terá o arquivo `TrybeHotelContext` com o contexto para a conexão com o banco de dados. Todos os `repository` e o `context` possuem interfaces que estão nesse diretório e fornecem o contrato para essas classes. Caso você precise criar um novo método para interação com o banco de dados que não esteja mapeado, você pode livremente criar esse novo método na `repository` mas sem se esquecer de escrever o contrato deste método na interface referente.
+- `Repository/`: This directory stores the logic that will interact with the database. The methods for each requirement are already created and you must include the implementation of each of these methods respecting the DTO return. Additionally, you will have the `TrybeHotelContext` file with the context for connecting to the database. All `repository` and `context` have interfaces that are in this directory and provide the contract for these classes. If you need to create a new method to interact with the database that is not mapped, you can freely create this new method in the `repository` but without forgetting to write the contract for this method in the referring interface.
 <br />
 
-- `Services`: Este diretório armazena os serviços responsáveis pela geração de token e pelo serviço geográfico.
+- `Services`: This directory stores the services responsible for token generation and the geographic service.
 
 <details id='der'>
-  <summary><strong>🎲 Banco de Dados</strong></summary>
-  <br/>
+   <summary><strong>🎲 Database</strong></summary>
+   <br/>
 
-  Para o desenvolvimento, o time de produto disponibilizou um *Diagrama de Entidade-Relacionamento (DER)* para construir a modelagem do banco de dados. Com essa imagem você já consegue saber:
-  - Como nomear suas tabelas e colunas;
-  - Quais são os tipos de suas colunas;
-  - Relações entre tabelas.
+   For development, the product team provided an *Entity-Relationship Diagram (DER)* to build the database modeling. With this image you can already know:
+   - How to name your tables and columns;
+   - What are the types of your columns;
+   - Relationships between tables.
 
-    ![banco de dados](img/der.png)
+     ![database](img/der.png)
 
-  O diagrama infere 05 tabelas:
-  - ***Cities***: tabela que armazenará um conjunto de cidades nas quais os hotéis estão localizados (já desenvolvida).
-  - ***Hotels***: tabela que armazenará os hotéis da nossa aplicação. Note que informamos o `CityId`, atributo que armazenará o id da cidade (já desenvolvida).
-  - ***Rooms***: tabela que armazenará os quartos de cada hotel da nossa aplicação. Note que informamos o `HotelId`, atributo que armazenará o id do hotel (já desenvolvida).
-  - ***Users***: tabela que armazenará as pessoas usuárias do sistema.
-  - ***Bookings***: tabela que armazenará as reservas de quartos de hotéis. Note que informamos os atributos `UserId`, que armazenará o id da pessoa usuária e `RoomId`, que armazenará o id do quarto reservado.
+   The diagram infers 05 tables:
+   - ***Cities***: table that will store a set of cities in which hotels are located (already developed).
+   - ***Hotels***: table that will store the hotels in our application. Note that we inform the `CityId`, an attribute that will store the id of the city (already developed).
+   - ***Rooms***: table that will store the rooms of each hotel in our application. Note that we inform the `HotelId`, an attribute that will store the hotel id (already developed).
+   - ***Users***: table that will store the people using the system.
+   - ***Bookings***: table that will store hotel room reservations. Note that we inform the attributes `UserId`, which will store the id of the user and `RoomId`, which will store the id of the reserved room.
 
-  Acerca dos relacionamentos, pelo diagrama de entidade-relacionamento temos:
-  - Uma cidade pode ter vários hotéis.
-  - Um hotel pode ter vários quartos.
-  - Uma pessoa usuária pode ter várias reservas.
-  - Um quarto pode ter várias reservas.
+   Regarding relationships, using the entity-relationship diagram we have:
+   - A city can have several hotels.
+   - A hotel can have several rooms.
+   - A user can have several reservations.
+   - A room can have several reservations.
 
-  ⚠️ **Você poderá criar migrations para visualizar o banco de dados**
+   ⚠️ **You can create migrations to view the database**
 
 </details>
 
 <details>
 <summary><strong>🐳 Docker</strong></summary><br />
 
-Para auxiliar no desenvolvimento, este projeto possui um arquivo do docker compose para subir um serviço do banco de dados `Azure Data Studio`. Este banco de dados possui a mesma arquitetura do `SQL Server`.
+To assist in development, this project has a docker compose file to upload a service from the `Azure Data Studio` database. This database has the same architecture as `SQL Server`.
 
-Para subir o serviço, utilize o comando:
+To upload the service, use the command:
 
 ```shell
 docker-compose up -d --build
 ```
 
-Para conectar ao seu sistema de gerenciamento de banco de dados, utilize as seguintes credenciais:
+To connect to your database management system, use the following credentials:
 
 - `Server`: localhost
 - `User`: sa
@@ -274,97 +274,99 @@ Para conectar ao seu sistema de gerenciamento de banco de dados, utilize as segu
 - `Database`: TrybeHotel
 - `Trust server certificate`: true
 
-Para criar o contexto do banco de dados na sua aplicação, utilize como connection string:
+To create the database context in your application, use as a connection string:
 
 ```csharp
 var connectionString = "Server=localhost;Database=TrybeHotel;User=SA;Password=TrybeHotel12!;TrustServerCertificate=True";
 ```
 
-⚠️ ** Essa connection string poderá ser utilizada no requisito 1 **
+⚠️ ** This connection string can be used in requirement 1 **
 
 </details>
 
-<details id='refatorando'>
-  <summary>Continuando o projeto Trybe Hotel</summary>
+<details id='refactoring'>
+   <summary>Continuing the Smart Hotel project</summary>
+   
+   
+   You have already started the project of our application and therefore, all functionalities can be brought in so as not to duplicate the operation. This will be very important, especially when it comes to the database. Some models from your previous database will be referenced in models now, so let's bring in the previous functionality.
 
-Você já iniciou o projeto da nossa aplicação e portanto, todas as funcionalidades podem ser trazidas para não duplicar o funcionamento. Isso será muito importante, especialmente no que diz respeito ao banco de dados. Algumas models do seu banco de dados anterior serão referenciadas nas models agora, portanto, vamos trazer as funcionalidades anteriores.
+But how do we do this:
 
-Mas como fazemos isso:
+After cloning this project's repository, just copy and paste the features you built previously:
 
-Após clonar o repositório deste projeto, apenas copie e cole as funcionalidades que você construiu anteriormente:
-
-- `Controllers`: copie todos os arquivos do diretório `Controllers` do projeto anterior e cole no diretório `Controllers` deste projeto.
-- `Dto`: copie todos os arquivos do diretório `Dto` do projeto anterior e cole no diretório `Dto` deste projeto.
-- `Models`: copie os arquivos referentes às models `City`, `Hotel`, `Room`, `User` e `Booking` do projeto anterior e cole no diretório `Models` deste projeto.
-- `Repository`: copie os arquivos `RoomRepository`, `HotelRepository`, `CityRepository`, `UserRepository` e `BookingRepository` do projeto anterior e cole no diretório `Repository` deste projeto. Não copie as interfaces. Para o arquivo `TrybeHotelContext`, não o substitua. Apenas adicione os `DBSets` e implemente os métodos `OnConfiguring()` e `OnModelCreating()`.
-- `Migrations`: Se você possui um diretório de migrations, significa que você criou migrations no projeto anterior. Não copie este diretório e crie migrations novas porque a instância do banco de dados no container não será o mesmo.
-- `Services`: copie todos os arquivos do diretório `Services` do projeto anterior e cole no diretório `Services` deste projeto.
-- `Testes`: No projeto de testes, você pode copiar a funcionalidade do arquivo `src/TrybeHotel.Test/IntegrationTest.cs`.
+- `Controllers`: copy all files from the `Controllers` directory of the previous project and paste into the `Controllers` directory of this project.
+- `Dto`: copy all files from the `Dto` directory of the previous project and paste into the `Dto` directory of this project.
+- `Models`: copy the files relating to the `City`, `Hotel`, `Room`, `User` and `Booking` models from the previous project and paste it into the `Models` directory of this project.
+- `Repository`: copy the files `RoomRepository`, `HotelRepository`, `CityRepository`, `UserRepository` and `BookingRepository` from the previous project and paste it into the `Repository` directory of this project. Do not copy interfaces. For the `TrybeHotelContext` file, do not replace it. Just add the `DBSets` and implement the `OnConfiguring()` and `OnModelCreating()` methods.
+- `Migrations`: If you have a migrations directory, it means you created migrations in the previous project. Do not copy this directory and create new migrations because the database instance in the container will not be the same.
+- `Services`: copy all files from the `Services` directory of the previous project and paste it into the `Services` directory of this project.
+- `Tests`: In the testing project, you can copy the functionality from the `src/TrybeHotel.Test/IntegrationTest.cs` file.
 
 </details>
 
 
 
-### 1. Desenvolva o endpoint GET /
+### 1. Develop the GET / endpoint
 
 <details>
-  <summary><strong>Mais informações:</strong></summary>
+   <summary><strong>More information:</strong></summary>
 
-  - Desenvolva o endpoint `GET /` de modo que a response da API seja um status de sucesso com o seguinte corpo de resposta:
+   - Design the `GET /` endpoint so that the API response is a success status with the following response body:
 
-  ```json
-  {
-	  "message": "online"
-  }
-  ```
- - Implemente o desenvolvimento no método `GetStatus()` do arquivo `src/TrybeHotel/Controllers/StatusController.cs`.
+   ```json
+   {
+"message": "online"
+   }
+   ```
+  - Implement the development in the `GetStatus()` method of the `src/TrybeHotel/Controllers/StatusController.cs` file.
 
-**O que será testado:**
+**What will be tested:**
 
-- Será testado que a response da API segue o padrão solicitado.
-
-</details>
-
-
-### 2. Desenvolva o Dockerfile
-
-<details>
-  <summary><strong>Mais informações:</strong></summary>
-
-  - Desenvolva o Dockerfile da aplicação capaz de criar um container da sua API
-  - Implemente no arquivo `src/TrybeHotel/Dockerfile`.
-
-**O que será testado:**
-
-- Será testado que a response da API segue o padrão solicitado.
+- It will be tested that the API response follows the requested pattern.
 
 </details>
 
 
-### 3. Faça o deploy da aplicação para o Railway - Bônus não avaliativo
+### 2. Develop the Dockerfile
 
 <details>
-  <summary><strong>Mais informações:</strong></summary>
+   <summary><strong>More information:</strong></summary>
 
-  - Utilize os conhecimentos adquiridos nesta seção para publicar a sua API Containerizada no Railway.
-  - **Este requisito é não avaliativo, portanto, não possui avaliação automatizada.**
+   - Develop the application Dockerfile capable of creating a container for your API
+   - Implement in the `src/TrybeHotel/Dockerfile` file.
 
+**What will be tested:**
+
+- It will be tested that the API response follows the requested pattern.
 
 </details>
 
+
+### 3. Deploy the application to Railway - Non-evaluative bonus
+
 <details>
-  <summary><strong>🗣 Nos dê feedbacks sobre o projeto!</strong></summary><br />
+   <summary><strong>More information:</strong></summary>
 
-Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. 
-**Leva menos de 3 minutos!**
+   - Use the knowledge acquired in this section to publish your Containerized API on Railway.
+   - **This requirement is non-evaluative, therefore, it does not have automated evaluation.**
 
-[FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/ZTeR4IbH#cohort_hidden=CH26-CSHARP&template=betrybe/csharp-0x-projeto-trybe-hotel-fase-d)
 
 </details>
 
 <details>
-  <summary><strong>🗂 Compartilhe seu portfólio!</strong></summary><br />
+   <summary><strong>🗣 Give us feedback on the project!</strong></summary><br />
 
-  Você sabia que o LinkedIn é a principal rede social profissional e que compartilhar aprendizados lá é muito importante para quem deseja construir uma carreira de sucesso? Compartilhe este projeto no seu LinkedIn, marque o perfil da Trybe (@trybe) e mostre para a sua rede toda a sua evolução.
+When finalizing and submitting the project, don't forget to rate your experience by filling out the form.
+**Takes less than 3 minutes!**
+
+[PROJECT EVALUATION FORM](https://be-trybe.typeform.com/to/ZTeR4IbH#cohort_hidden=CH26-CSHARP&template=betrybe/csharp-0x-projeto-trybe-hotel-fase-d)
 
 </details>
+
+<details>
+   <summary><strong>🗂 Share your portfolio!</strong></summary><br />
+
+   Did you know that LinkedIn is the main professional social network and that sharing learnings there is very important for anyone who wants to build a successful career? Share this project on your LinkedIn, tag Trybe's profile (@trybe) and show your network its evolution.
+
+</details>
+   
